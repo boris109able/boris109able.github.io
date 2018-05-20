@@ -2,6 +2,8 @@
 layout: post
 title: UVa12569 - Planning mobile robot on Tree (EASY Version)
 ---
+Use BFS and notice state compression.
+
 ```cpp
 //#define LOCAL
 #include<cstdio>
