@@ -2,7 +2,8 @@
 layout: post
 title: UVa12569 - Planning mobile robot on Tree (EASY Version)
 ---
-Use BFS and notice state compression. The state is composed of the position of robot and the state (taken/empty) of each node. The robot position has up to 15 choices and nodes state can be up to 2^15.
+Use BFS and notice state compression. The state is composed of the position of robot and the state (taken/empty) of each node. The robot position has up to 15 choices and nodes state can be up to 2^15. 
+If these two are combined together, the states are too many. We can use an int to represent the states.
 
 ```cpp
 //#define LOCAL
