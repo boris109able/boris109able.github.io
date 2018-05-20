@@ -2,7 +2,7 @@
 layout: post
 title: UVa12569 - Planning mobile robot on Tree (EASY Version)
 ---
-'''cpp
+```cpp
 //#define LOCAL
 #include<cstdio>
 #include<vector>
@@ -129,4 +129,4 @@ int main() {
 	}
 	return 0;
 }
-'''
+```
