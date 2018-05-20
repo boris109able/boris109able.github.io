@@ -2,7 +2,7 @@
 layout: post
 title: UVa12569 - Planning mobile robot on Tree (EASY Version)
 ---
-Use BFS and notice state compression.
+Use BFS and notice state compression. The state is composed of the position of robot and the state (taken/empty) of each node.
 
 ```cpp
 //#define LOCAL
