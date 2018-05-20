@@ -6,6 +6,8 @@ Use BFS and notice state compression. The state is composed of the position of r
 If these two are combined together, the states are too many. We can use an int to represent the states. The lower 4 bits to store the robot position, the upper bits (at most 15) to store each node is taken or empty.
 The action following current state and parent of current state are need to be recorded to reconstruct the search path.
 
+One common problem is TLE. The solution is to use array instead of unordered_map. Queue in bfs can also use array since the state number is limited (15 * 2^15).
+
 ```cpp
 //#define LOCAL
 #include<cstdio>
