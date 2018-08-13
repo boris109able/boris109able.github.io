@@ -6,9 +6,8 @@ title: UVa 1025 - A Spy in the Metro (DP)
 1. 初始条件：dp(N,t)=0；dp(i,t)=inf, 1<=i<=N-1。
 2. 状态转移：dp(i,t)=min(dp(i,t+1)+1, dp(i-1, t+t[i-1]), dp(i+1, t+t[i]))。表示等待，向左走，向右走。注意并不是每个状态都可以向左右走，需要判断当前时刻是否有车，以及当前车站否是在最左或最右，以及是否无法会面(t+t[i-1] > T或者t+t[i]>T)。
 3. 解：dp(1,0)
+
 ```cpp
-// UVa 1025 - A Spy in the Metro
-//#define LOCAL
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -22,12 +21,7 @@ int t[maxn], d[maxm], e[maxm];
 int l_train[maxn][maxt], r_train[maxn][maxt];
 int dp[maxn][maxt];
 
-int main() {
-    #ifdef LOCAL
-    freopen("data.in", "r", stdin);
-    freopen("data.out", "w", stdout);
-    #endif
-    
+int main() {  
     int N, T, M1, M2;
     int kase = 1;
     while (scanf("%d", &N) == 1 && N) {
